@@ -1,11 +1,13 @@
 import requests
 import zipfile
 from pathlib import Path
+import os
 
+# Through the link, we can download any datasets
 def download_data(source: str, 
                   destination: str,
                   remove_source: bool = True) -> Path:
-    """Downloads a zipped dataset from source and unzips to destination.
+    """ Downloads a zipped dataset from the source and unzips it to the destination.
 
     Args:
         source (str): A link to a zipped file containing data.
